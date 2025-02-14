@@ -93,6 +93,24 @@ E: Elevation of Privilege (Elevación de privilegios)
 
 Cada amenaza es evaluada usando el modelo DREAD, asignando un puntaje entre 4.0 y 10.0.
 
+🧩 Justificación de Librerías Usadas
+
+fastapi: Framework web para construir APIs de forma rápida y eficiente, optimizado para Python moderno con soporte para validación y documentación automática.
+
+uvicorn: Servidor ASGI ligero y rápido que permite ejecutar aplicaciones FastAPI.
+
+pydantic: Biblioteca para validación de datos basada en anotaciones de tipos de Python, fundamental para garantizar la integridad de los datos en las solicitudes API.
+
+transformers (IA): Utilizada para procesar el texto de entrada y detectar patrones relacionados con amenazas, empleando modelos de lenguaje preentrenados.
+
+tf-keras (IA): Provee compatibilidad con modelos de TensorFlow necesarios para realizar inferencias en el análisis de amenazas mediante redes neuronales.
+
+📘 Detalles del Uso de IA
+
+La inteligencia artificial en esta PoC se basa en el uso de transformers para comprender el contenido textual de las solicitudes e identificar posibles amenazas en función de su descripción y contexto.
+
+Se utilizan modelos preentrenados de procesamiento de lenguaje natural (NLP) para reconocer patrones semánticos y asignar la categoría STRIDE y el puntaje DREAD correspondientes.
+
 🛑 Posibles Errores y Soluciones
 
 1. ModuleNotFoundError: No module named 'fastapi'
